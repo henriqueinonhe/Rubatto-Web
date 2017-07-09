@@ -16,22 +16,23 @@ nav {
     text-align: center;
     box-shadow: 0 0 5px 1px #333; }
     nav ul li {
+      user-select: none;
       position: relative;
       display: inline-block;
       text-align: center;
-      padding: 10px 20px; }
+      padding: 10px 20px;
+      border-radius: 3px; }
     nav ul li:hover {
       transition: 0.5s;
-      background-color: rgba(0, 0, 0, 0.2);
+      background-color: rgba(238, 33, 33, 0.8);
       color: white;
       cursor: pointer; }
 
-/*
 #sensor {
-	position: fixed;
-	z-index: 99999;
-	font-size: 20px;
-}*/
+  position: fixed;
+  z-index: 99999;
+  font-size: 20px; }
+
 #logo {
   background-image: url(../img/logo.png);
   background-position: center;
@@ -116,7 +117,8 @@ nav {
     margin-bottom: 30px;
     border-color: #CCC;
     border-style: solid;
-    border-width: 1px 0; }
+    border-width: 1px 0;
+    padding: 10px 0; }
   .content p {
     font-size: 16px; }
 
@@ -250,5 +252,15 @@ nav {
 
 iframe {
   border: none; }
+
+.active {
+  background-color: rgba(238, 33, 33, 0.8);
+  color: white;
+  transition: 0.5s; }
+
+.notActive {
+  background-color: none;
+  color: #666;
+  transition: 0.5; }
 
 /*# sourceMappingURL=style.css.map */
