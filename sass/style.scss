@@ -124,6 +124,10 @@ nav {
 		border-style: solid;
 		border-width: 1px 0;
 	}
+
+	p {
+		font-size: 16px;
+	}
 }
 
 #sobre {
@@ -131,7 +135,7 @@ nav {
 
 
 	p {
-		line-height: 23px;
+		line-height: 24px;
 		margin-bottom: 10px;
 	}
 
@@ -257,6 +261,38 @@ nav {
 			width: 100%;
 			height: 100%;
 		}
+	}
+}
+
+#repertorio {
+
+	p {
+		text-align: center;
+	}
+
+	.repertorio-container {
+		float: left;
+		width: 50%;
+		padding: 20px;
+	}
+}
+
+#contato {
+	input {
+		display: block;
+		height: 30px;
+		margin-top: 15px;
+		padding: 5px 5px;
+		width: 50%;
+		font-size: 14px;
+	}
+
+	textarea {
+		margin-top: 15px;
+		width: 50%;
+		height: 200px;
+		font-size: 14px;
+		padding: 5px;
 	}
 }
 
