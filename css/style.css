@@ -25,6 +25,11 @@ nav {
       color: white;
       cursor: pointer; }
 
+#sensor {
+  position: fixed;
+  z-index: 99999;
+  font-size: 20px; }
+
 #logo {
   background-image: url(../img/logo.png);
   background-position: center;
