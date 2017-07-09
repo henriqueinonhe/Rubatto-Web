@@ -1,0 +1,265 @@
+$main-color: #EE2121;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Roboto, sans-serif;
+	color: #666;
+}
+
+nav {
+	z-index: 9999;
+	position: fixed;
+	width: 100%;
+	ul {
+		list-style: none;
+		background: linear-gradient(#EEE, #FFF);
+		text-align: center;
+		box-shadow: 0 0 5px 1px #333;
+		li {
+			position: relative;
+			display: inline-block;
+			text-align: center;
+			padding: 10px 20px;
+		}
+
+		li:hover {
+			transition: 0.5s;
+			background-color: rgba(black, 0.2);
+			color: white;
+			cursor: pointer;
+		}
+	}	
+}
+
+#logo {
+	background-image: url(../img/logo.png);
+	background-position: center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	padding: 50px 100px 50px 100px;
+	margin: 0 50px;
+	font-size: 0;
+
+}
+
+#logo {
+	background-color: rgba($main-color, 0);
+}
+
+#jumbotron {
+	padding-top: 100px;
+	height: 450px;
+	width: 100%;
+	position: relative;
+	margin-bottom: 120px;
+
+	span {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-size: 100% 100%;
+		background-position: center;
+		animation-duration: 15s;
+		animation-iteration-count: infinite;
+		animation-timing-function: ease-out;
+		border-bottom: 4px $main-color solid;
+	}
+	#jumbo1 {
+		background-image: url(../img/jumbotron1.jpg);
+		z-index: 3;
+		animation-name: jumbo1;
+	}
+
+	#jumbo2 {
+		background-image: url(../img/jumbotron2.jpg);
+		z-index: 2;
+		animation-name: jumbo2;
+	}
+
+	#jumbo3 {
+		background-image: url(../img/jumbotron3.jpg);
+		z-index: 1;
+		animation-name: jumbo3;
+	}
+}
+
+@keyframes jumbo1 {
+	0% {opacity: 1;}
+	16.6% {opacity: 1;}
+	33.2% {opacity: 0;}
+	83.3% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@keyframes jumbo2 {
+	0% {opacity: 1;}
+	50% {opacity: 1;}
+	66.6% {opacity: 0;}
+	100% {opacity: 0;}
+}
+
+@keyframes jumbo3 {
+	0% {opacity: 1;}
+	66.6% {opacity: 1;}
+	83.3% {opacity: 1;}
+	100% {opacity: 1;}
+}
+
+.content {
+	margin: 50px 20%;
+	width: 60%;
+	clear: both;
+
+	h2 {
+		text-align: center;
+		font-weight: normal;
+		letter-spacing: 1px;
+		color: $main-color;
+		text-transform: uppercase;
+		font-size: 30px;
+		margin-bottom: 30px;
+		border-color: #CCC;
+		border-style: solid;
+		border-width: 1px 0;
+	}
+}
+
+#sobre {
+	text-align: center;
+
+
+	p {
+		line-height: 23px;
+		margin-bottom: 10px;
+	}
+
+	#membros-container {
+		margin-top: 40px;
+
+		.membros {
+			float: left;
+			width: 100%;
+			padding: 0 20px;
+			margin-bottom: -35px;
+
+			img {
+				float: left;
+				border-radius: 100%;
+			}
+
+			h3 {
+				top: 50px;
+				left: 30px;
+				text-align: left;
+				position: relative;
+				color: black;
+			}
+
+			p {
+				margin-top: 60px;
+				text-align: left;
+				position: relative;
+				left: 40px;
+			}
+		}
+
+		.membros:last-child {
+			margin-bottom: 40px;
+		}
+
+		#henrique {
+
+			img {
+				float: right;
+			}
+
+			h3 {
+				left: -30px;
+				text-align: right;
+			}
+
+			p {
+				text-align: right;
+				position: relative;
+				left: -40px;
+			}
+		}
+	}
+
+}
+
+.linha {
+	width: 100%;
+	height: 170px;
+
+	.coluna {
+		float: left;
+		width: 33.33%;
+		padding: 5px;
+		height: 170px;
+
+		.foto {
+			background-position: center;
+			background-size: 100%;
+			background-repeat: no-repeat;
+			height: 100%;
+			transition: 0.8s;
+			filter: grayscale(100%);
+		}
+
+		.foto:hover {
+			transition: 0.3s;
+			filter: grayscale(0%);
+		}
+
+		#foto1 {
+			background-image: url(../img/foto1.jpg);
+		}
+
+		#foto2 {
+			background-image: url(../img/foto2.jpg);
+			background-position: top;
+		}
+
+		#foto3 {
+			background-image: url(../img/foto3.jpg);
+			background-size: 100% 100%;
+		}
+
+		#foto4 {
+			background-image: url(../img/foto4.jpg);
+			background-size: 100% 100%;
+		}
+
+		#foto5 {
+			background-image: url(../img/foto5.jpg);
+		}
+
+		#foto6 {
+			background-image: url(../img/foto6.jpg);
+		}
+	}
+}
+
+#videos {
+	margin-top: 40px;
+	height: 350px;
+
+	.video-container {
+		width: 50%;
+		height: 300px;
+		float: left;
+		padding: 10px;
+
+		iframe {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+iframe {
+	border: none;
+}
