@@ -287,12 +287,35 @@ nav {
 		font-size: 14px;
 	}
 
+	input:focus {
+		outline: none;
+		border: 1px solid $main-color;
+		box-shadow: 1px 1px 1px 1px #AAA;
+	}
+
 	textarea {
+		outline: none;
+		display: block;
 		margin-top: 15px;
 		width: 50%;
 		height: 200px;
 		font-size: 14px;
 		padding: 5px;
+	}
+
+	textarea:focus {
+		border: 1px solid $main-color;
+		box-shadow: 1px 1px 1px 1px #AAA;
+	}
+
+	button {
+		margin-top: 15px;
+		padding: 10px 20px;
+		font-size: 18px;
+		background-color: $main-color;
+		border: 1px #AAA solid;
+		color: #222;
+		border-radius: 3px;
 	}
 }
 

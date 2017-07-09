@@ -211,12 +211,29 @@ nav {
   padding: 5px 5px;
   width: 50%;
   font-size: 14px; }
+#contato input:focus {
+  outline: none;
+  border: 1px solid #EE2121;
+  box-shadow: 1px 1px 1px 1px #AAA; }
 #contato textarea {
+  outline: none;
+  display: block;
   margin-top: 15px;
   width: 50%;
   height: 200px;
   font-size: 14px;
   padding: 5px; }
+#contato textarea:focus {
+  border: 1px solid #EE2121;
+  box-shadow: 1px 1px 1px 1px #AAA; }
+#contato button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #EE2121;
+  border: 1px #AAA solid;
+  color: #222;
+  border-radius: 3px; }
 
 iframe {
   border: none; }
