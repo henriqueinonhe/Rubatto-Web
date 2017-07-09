@@ -6,6 +6,7 @@ $main-color: #EE2121;
 	box-sizing: border-box;
 	font-family: Roboto, sans-serif;
 	color: #666;
+	position: relative;
 }
 
 nav {
@@ -33,11 +34,12 @@ nav {
 	}	
 }
 
+/*
 #sensor {
 	position: fixed;
 	z-index: 99999;
 	font-size: 20px;
-}
+}*/
 
 #logo {
 	background-image: url(../img/logo.png);
@@ -179,7 +181,12 @@ nav {
 			margin-bottom: 40px;
 		}
 
+		#boaz, #daniel {
+			left: -750px;
+		}
+
 		#henrique {
+			right: -750px;
 
 			img {
 				float: right;

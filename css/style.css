@@ -3,7 +3,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Roboto, sans-serif;
-  color: #666; }
+  color: #666;
+  position: relative; }
 
 nav {
   z-index: 9999;
@@ -25,11 +26,12 @@ nav {
       color: white;
       cursor: pointer; }
 
+/*
 #sensor {
-  position: fixed;
-  z-index: 99999;
-  font-size: 20px; }
-
+	position: fixed;
+	z-index: 99999;
+	font-size: 20px;
+}*/
 #logo {
   background-image: url(../img/logo.png);
   background-position: center;
@@ -146,15 +148,19 @@ nav {
         left: 40px; }
     #sobre #membros-container .membros:last-child {
       margin-bottom: 40px; }
-    #sobre #membros-container #henrique img {
-      float: right; }
-    #sobre #membros-container #henrique h3 {
-      left: -30px;
-      text-align: right; }
-    #sobre #membros-container #henrique p {
-      text-align: right;
-      position: relative;
-      left: -40px; }
+    #sobre #membros-container #boaz, #sobre #membros-container #daniel {
+      left: -750px; }
+    #sobre #membros-container #henrique {
+      right: -750px; }
+      #sobre #membros-container #henrique img {
+        float: right; }
+      #sobre #membros-container #henrique h3 {
+        left: -30px;
+        text-align: right; }
+      #sobre #membros-container #henrique p {
+        text-align: right;
+        position: relative;
+        left: -40px; }
 
 .linha {
   width: 100%;
