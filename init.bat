@@ -1,0 +1,1 @@
+sass --watch "C:\Users\Henrique\Desktop\Site Rubatto\sass":"C:\Users\Henrique\Desktop\Site Rubatto\css"
