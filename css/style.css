@@ -183,7 +183,8 @@ nav {
       filter: grayscale(100%); }
     .linha .coluna .foto:hover {
       transition: 0.3s;
-      filter: grayscale(0%); }
+      filter: grayscale(0%);
+      cursor: pointer; }
     .linha .coluna #foto1 {
       background-image: url(../img/foto1.jpg); }
     .linha .coluna #foto2 {
