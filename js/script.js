@@ -15,37 +15,23 @@ function animateNavBar() {
 	$(document).scroll(function() {
 		$("#sensor").html(window.pageYOffset);
 		if(window.pageYOffset > 200 && !navToggled) {
-			$("#logo").css('background-image', 'url(img/logo2.png)');
-			$("#logo").animate({
-				padding: "30px 75px 30px 75px"},
-				400, function() {
-				/* stuff to do after animation is complete */
-			});
-			$("nav ul").animate({
-				paddingTop: "5px",},
-				400, function() {
-				/* stuff to do after animation is complete */
-			});
+			$("#logo h1 img").attr('src', 'img/logo2.png');
+			$("#logo img").animate({
+				width: "108px", height: "40px", margin : "0 30px"},
+				400);
 			navToggled = true;
 		}
 		else if(window.pageYOffset <= 150 && navToggled) {
-			$("#logo").css('background-image', 'url(img/logo.png)');
-			$("#logo").animate({
-				padding: "50px 100px"},
-				400, function() {
-				/* stuff to do after animation is complete */
-			});
-			$("nav ul").animate({
-				paddingTop: "0",},
-				400, function() {
-				/* stuff to do after animation is complete */
-			});
+			$("#logo h1 img").attr('src', 'img/logo.png');
+			$("#logo img").animate({
+				width: "216px", height: "80px", margin : "0 50px"},
+				400);
 			navToggled = false;
 		}
 	});
 }
 
-function animateMembros() {
+function animateMembros() { //Yeah... WTF!
 	$(window).scroll(function() {
 		if(window.pageYOffset >= 300) {
 			$("#boaz").animate({left: "0"}, 600, function() {

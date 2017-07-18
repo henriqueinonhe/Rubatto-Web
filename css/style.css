@@ -20,7 +20,8 @@ nav {
       display: inline-block;
       text-align: center;
       padding: 10px 20px;
-      border-radius: 3px; }
+      border-radius: 3px;
+      vertical-align: middle; }
     nav ul li:hover {
       transition: 0.5s;
       background-color: rgba(238, 33, 33, 0.8);
@@ -33,19 +34,20 @@ nav {
   font-size: 20px; }
 
 #logo {
-  background-image: url(../img/logo.png);
-  background-position: center;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  padding: 50px 100px 50px 100px;
-  margin: 0 50px;
+  padding: 5px 0;
+  position: relative;
   font-size: 0; }
+  #logo img {
+    margin: 0 50px;
+    vertical-align: middle;
+    width: 216px;
+    height: 80px; }
 
 #logo {
   background-color: rgba(238, 33, 33, 0); }
 
 #jumbotron {
-  padding-top: 100px;
+  padding-top: 90px;
   height: 500px;
   width: 100%;
   position: relative;
@@ -247,7 +249,7 @@ nav {
   font-size: 18px;
   background-color: #EE2121;
   border: 1px #AAA solid;
-  color: #222;
+  color: white;
   border-radius: 3px; }
 
 iframe {
