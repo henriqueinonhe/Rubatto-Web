@@ -6,6 +6,10 @@
   color: #666;
   position: relative; }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; }
+
 nav {
   z-index: 9999;
   position: fixed;
@@ -138,8 +142,8 @@ nav {
       #sobre #membros-container .membros img {
         float: left;
         border-radius: 100%;
-        border: #AAA 7px solid;
-        background-color: #AAA; }
+        border: #9d0c0c 7px solid;
+        background-color: #9d0c0c; }
       #sobre #membros-container .membros h3 {
         top: 50px;
         left: 30px;
@@ -221,36 +225,45 @@ nav {
   width: 50%;
   padding: 20px; }
 
-#contato input {
-  display: block;
-  height: 30px;
-  margin-top: 15px;
-  padding: 5px 5px;
-  width: 50%;
-  font-size: 14px; }
-#contato input:focus {
-  outline: none;
-  border: 1px solid #EE2121;
-  box-shadow: 1px 1px 1px 1px #AAA; }
-#contato textarea {
-  outline: none;
-  display: block;
-  margin-top: 15px;
-  width: 50%;
-  height: 200px;
-  font-size: 14px;
-  padding: 5px; }
-#contato textarea:focus {
-  border: 1px solid #EE2121;
-  box-shadow: 1px 1px 1px 1px #AAA; }
-#contato button {
-  margin-top: 15px;
-  padding: 10px 20px;
-  font-size: 18px;
-  background-color: #EE2121;
-  border: 1px #AAA solid;
-  color: white;
-  border-radius: 3px; }
+#contato {
+  padding-bottom: 500px; }
+  #contato #contato-esquerda {
+    width: 45%;
+    float: left; }
+    #contato #contato-esquerda input {
+      display: block;
+      height: 30px;
+      margin-top: 15px;
+      padding: 5px 5px;
+      width: 100%;
+      font-size: 14px; }
+    #contato #contato-esquerda input:focus {
+      outline: none;
+      border: 1px solid #EE2121;
+      box-shadow: 1px 1px 1px 1px #AAA; }
+    #contato #contato-esquerda textarea {
+      outline: none;
+      display: block;
+      margin-top: 15px;
+      width: 100%;
+      height: 200px;
+      font-size: 14px;
+      padding: 5px; }
+    #contato #contato-esquerda textarea:focus {
+      border: 1px solid #EE2121;
+      box-shadow: 1px 1px 1px 1px #AAA; }
+    #contato #contato-esquerda button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #EE2121;
+      border: 1px #AAA solid;
+      color: white;
+      border-radius: 3px; }
+  #contato #contato-direita {
+    float: left;
+    margin-left: 5%;
+    width: 45%; }
 
 iframe {
   border: none; }
