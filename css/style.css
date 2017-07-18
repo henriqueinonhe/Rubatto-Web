@@ -17,7 +17,6 @@ nav {
     box-shadow: 0 0 5px 1px #333; }
     nav ul li {
       user-select: none;
-      position: relative;
       display: inline-block;
       text-align: center;
       padding: 10px 20px;

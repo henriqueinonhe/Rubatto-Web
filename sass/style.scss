@@ -1,11 +1,12 @@
 $main-color: #EE2121;
+$text-color: #666;
 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	font-family: Roboto, sans-serif;
-	color: #666;
+	color: $text-color;
 	position: relative;
 }
 
@@ -20,7 +21,6 @@ nav {
 		box-shadow: 0 0 5px 1px #333;
 		li {
 			user-select: none;
-			position: relative;
 			display: inline-block;
 			text-align: center;
 			padding: 10px 20px;
@@ -349,6 +349,6 @@ iframe {
 
 .notActive {
 	background-color: none;
-	color: #666;
+	color: $text-color;
 	transition: 0.5;	
 }
