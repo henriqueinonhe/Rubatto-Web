@@ -10,6 +10,10 @@ $text-color: #666;
 	position: relative;
 }
 
+.clearfix {
+	clear: both;
+}
+
 html, body {
 	max-width: 100%;
     overflow-x: hidden;
@@ -59,7 +63,7 @@ nav {
 		margin: 0 50px;
 		vertical-align: middle;
 		width: 216px;
-		height: 80px;
+		height: 70px;
 	}
 
 }
@@ -69,8 +73,8 @@ nav {
 }
 
 #jumbotron {
-	padding-top: 90px;
-	height: 500px;
+	padding-top: 80px;
+	height: 37vw;
 	width: 100%;
 	position: relative;
 	margin-bottom: 120px;
@@ -129,7 +133,7 @@ nav {
 }
 
 .content {
-	margin: 50px 20%;
+	margin: 20vh 20%;
 	width: 60%;
 	clear: both;
 
@@ -225,13 +229,13 @@ nav {
 
 .linha {
 	width: 100%;
-	height: 170px;
+	height: 12vw;
 
 	.coluna {
 		float: left;
 		width: 33.33%;
 		padding: 5px;
-		height: 170px;
+		height: 12vw;
 
 		.foto {
 			background-position: center;
@@ -250,25 +254,26 @@ nav {
 
 		#foto1 {
 			background-image: url(../img/foto1.jpg);
+			background-position: 0 -20px;
 		}
 
 		#foto2 {
 			background-image: url(../img/foto2.jpg);
-			background-position: top;
 		}
 
 		#foto3 {
 			background-image: url(../img/foto3.jpg);
-			background-size: 100% 100%;
+			background-position: top;
 		}
 
 		#foto4 {
 			background-image: url(../img/foto4.jpg);
-			background-size: 100% 100%;
+			background-position: top;
 		}
 
 		#foto5 {
 			background-image: url(../img/foto5.jpg);
+			background-position: top;
 		}
 
 		#foto6 {
@@ -283,7 +288,7 @@ nav {
 
 	.video-container {
 		width: 50%;
-		height: 300px;
+		height: 20vw;
 		float: left;
 		padding: 10px;
 
@@ -359,6 +364,23 @@ nav {
 		float: left;
 		margin-left: 5%;
 		width: 45%;
+
+		p {
+			margin-top: 5px;
+		}
+
+		.contato-titulo {
+			margin-bottom: 10px;
+		}
+
+		img {
+			top: 3px;
+		}
+
+		#emails {
+			margin-top: 15px;
+		}
+
 	}
 
 }

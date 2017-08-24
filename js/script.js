@@ -7,6 +7,12 @@ function main() {
 	animateMembros();
 	animateNavLinks();
 	animateNavLinksScroll();
+
+	//checkEnableMailSendButton();
+}
+
+function scrollOffset(element) {
+	return parseInt($(element).offset().top - 70);
 }
 
 function animateNavBar() {
@@ -17,29 +23,29 @@ function animateNavBar() {
 		if(window.pageYOffset > 200 && !navToggled) {
 			$("#logo h1 img").attr('src', 'img/logo2.png');
 			$("#logo img").animate({
-				width: "108px", height: "40px", margin : "0 30px"},
+				width: "108px", height: "35px", margin : "0 30px"},
 				400);
 			navToggled = true;
 		}
 		else if(window.pageYOffset <= 150 && navToggled) {
 			$("#logo h1 img").attr('src', 'img/logo.png');
 			$("#logo img").animate({
-				width: "216px", height: "80px", margin : "0 50px"},
+				width: "216px", height: "70px", margin : "0 50px"},
 				400);
 			navToggled = false;
 		}
 	});
 }
 
-function animateMembros() { //Yeah... WTF!
+function animateMembros() {
 	$(window).scroll(function() {
-		if(window.pageYOffset >= 300) {
+		if(window.pageYOffset >= scrollOffset("#boaz") - $(window).height() + 140) {
 			$("#boaz").animate({left: "0"}, 600, function() {
 				$(window).scroll(function() {
-					if(window.pageYOffset >= 450) {
+					if(window.pageYOffset >= scrollOffset("#henrique") - $(window).height() + 140) {
 						$("#henrique").animate({right: "0"}, 600, function() {
 							$(window).scroll(function() {
-								if(window.pageYOffset >= 600) {
+								if(window.pageYOffset >= scrollOffset("#daniel") - $(window).height() + 140) {
 									$("#daniel").animate({left: "0"}, 600);
 								}
 							});
@@ -51,9 +57,9 @@ function animateMembros() { //Yeah... WTF!
 	});
 }
 
-function resetNavLink(id) {
-	$(id).removeClass('active');
-	$(id).addClass('notActive');
+function resetNavLink() {
+	$("header nav ul li").removeClass('active');
+	$("header nav ul li").addClass('notActive');
 }
 
 function activateNavLink(id) {
@@ -63,32 +69,28 @@ function activateNavLink(id) {
 
 function animateNavLinks() {
 	$(window).scroll(function() {
-		if(window.pageYOffset <= 200) {
+		if(window.pageYOffset <= scrollOffset("#sobre")) {
+			resetNavLink();			
 			activateNavLink("#homeLink");
-			resetNavLink("#sobreLink");			
 		}
-		else if(window.pageYOffset > 200 && window.pageYOffset <= 1000) {
-			resetNavLink("#homeLink");
+		else if(window.pageYOffset > scrollOffset("#sobre") && window.pageYOffset <= scrollOffset("#fotos")) {
+			resetNavLink();
 			activateNavLink("#sobreLink");
-			resetNavLink("#fotosLink");
 		}
-		else if(window.pageYOffset > 1000 && window.pageYOffset <= 1550) {
-			resetNavLink("#sobreLink");
+		else if(window.pageYOffset > scrollOffset("#fotos") && window.pageYOffset <= scrollOffset("#videos")) {
+			resetNavLink();
 			activateNavLink("#fotosLink");
-			resetNavLink("#videosLink");
 		}
-		else if(window.pageYOffset > 1550 && window.pageYOffset <= 2000) {
-			resetNavLink("#fotosLink");
+		else if(window.pageYOffset > scrollOffset("#videos") && window.pageYOffset <= scrollOffset("#repertorio")) {
+			resetNavLink();
 			activateNavLink("#videosLink");
-			resetNavLink("#repertorioLink");
 		}
-		else if(window.pageYOffset > 2000 && window.pageYOffset <= 2300) {
-			resetNavLink("#videosLink");
+		else if(window.pageYOffset > scrollOffset("#repertorio") && window.pageYOffset <= scrollOffset("#contato")) {
+			resetNavLink();
 			activateNavLink("#repertorioLink");
-			resetNavLink("#contatoLink");
 		}
-		else if(window.pageYOffset > 2300) {
-			resetNavLink("#repertorioLink");
+		else if(window.pageYOffset > scrollOffset("#contato")) {
+			resetNavLink();
 			activateNavLink("#contatoLink");
 		}
 	});
@@ -99,18 +101,40 @@ function animateNavLinksScroll() {
 		$("body").animate({scrollTop : "0"}, 500);
 	});
 	$("#sobreLink").click(function() {
-		$("body").animate({scrollTop : "530px"}, 500)
+		$("body").animate({scrollTop : scrollOffset("#sobre") + 1 + "px"}, 500)
 	});
 	$("#fotosLink").click(function() {
-		$("body").animate({scrollTop : "1200px"}, 500)
+		$("body").animate({scrollTop : scrollOffset("#fotos") + 1 + "px"}, 500)
 	});
 	$("#videosLink").click(function() {
-		$("body").animate({scrollTop : "1700px"}, 500)
+		$("body").animate({scrollTop : scrollOffset("#videos") + 1 + "px"}, 500)
 	});
 	$("#repertorioLink").click(function() {
-		$("body").animate({scrollTop : "2100px"}, 500)
+		$("body").animate({scrollTop : scrollOffset("#repertorio") + 1 + "px"}, 500)
 	});
 	$("#contatoLink").click(function() {
-		$("body").animate({scrollTop : "2350px"}, 500)
+		$("body").animate({scrollTop : scrollOffset("#contato") + 1 + "px"}, 500)
 	});
 }
+
+function checkEnableMailSendButton() {
+	$("button").prop("disabled", true);
+	$("button").css("background-color", "gray");
+
+	$("input").click(function() {
+		if(!$("input").eq(0).val() || !$("input").eq(1).val() ||
+			!$("input").eq(2).val()) {
+			$("button").prop("disabled", true);
+			$("button").css("background-color", "#EE2121");
+		}
+		else {
+			$("button").prop("disabled", false);
+			$("button").css("background-color", "gray");
+		}
+	});
+}
+
+
+
+
+

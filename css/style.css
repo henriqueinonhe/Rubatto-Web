@@ -6,6 +6,9 @@
   color: #666;
   position: relative; }
 
+.clearfix {
+  clear: both; }
+
 html, body {
   max-width: 100%;
   overflow-x: hidden; }
@@ -45,14 +48,14 @@ nav {
     margin: 0 50px;
     vertical-align: middle;
     width: 216px;
-    height: 80px; }
+    height: 70px; }
 
 #logo {
   background-color: rgba(238, 33, 33, 0); }
 
 #jumbotron {
-  padding-top: 90px;
-  height: 500px;
+  padding-top: 80px;
+  height: 37vw;
   width: 100%;
   position: relative;
   margin-bottom: 120px; }
@@ -110,7 +113,7 @@ nav {
   100% {
     opacity: 1; } }
 .content {
-  margin: 50px 20%;
+  margin: 20vh 20%;
   width: 60%;
   clear: both; }
   .content h2 {
@@ -174,12 +177,12 @@ nav {
 
 .linha {
   width: 100%;
-  height: 170px; }
+  height: 12vw; }
   .linha .coluna {
     float: left;
     width: 33.33%;
     padding: 5px;
-    height: 170px; }
+    height: 12vw; }
     .linha .coluna .foto {
       background-position: center;
       background-size: 100%;
@@ -192,18 +195,19 @@ nav {
       filter: grayscale(0%);
       cursor: pointer; }
     .linha .coluna #foto1 {
-      background-image: url(../img/foto1.jpg); }
+      background-image: url(../img/foto1.jpg);
+      background-position: 0 -20px; }
     .linha .coluna #foto2 {
-      background-image: url(../img/foto2.jpg);
-      background-position: top; }
+      background-image: url(../img/foto2.jpg); }
     .linha .coluna #foto3 {
       background-image: url(../img/foto3.jpg);
-      background-size: 100% 100%; }
+      background-position: top; }
     .linha .coluna #foto4 {
       background-image: url(../img/foto4.jpg);
-      background-size: 100% 100%; }
+      background-position: top; }
     .linha .coluna #foto5 {
-      background-image: url(../img/foto5.jpg); }
+      background-image: url(../img/foto5.jpg);
+      background-position: top; }
     .linha .coluna #foto6 {
       background-image: url(../img/foto6.jpg); }
 
@@ -212,7 +216,7 @@ nav {
   height: 350px; }
   #videos .video-container {
     width: 50%;
-    height: 300px;
+    height: 20vw;
     float: left;
     padding: 10px; }
     #videos .video-container iframe {
@@ -265,6 +269,14 @@ nav {
     float: left;
     margin-left: 5%;
     width: 45%; }
+    #contato #contato-direita p {
+      margin-top: 5px; }
+    #contato #contato-direita .contato-titulo {
+      margin-bottom: 10px; }
+    #contato #contato-direita img {
+      top: 3px; }
+    #contato #contato-direita #emails {
+      margin-top: 15px; }
 
 iframe {
   border: none; }
